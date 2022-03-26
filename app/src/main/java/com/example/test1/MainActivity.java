@@ -35,14 +35,13 @@ private ActivityMainBinding binding;
 
 
         //showing the website
-
         WebView browser = (WebView) findViewById(R.id.webView);
-        browser.setWebViewClient(new WebViewClient());
-        browser.getSettings().setJavaScriptEnabled(true);
-        browser.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-        browser.getSettings().setAllowContentAccess(true);
-        browser.getSettings().setAllowFileAccess(true);
-        browser.loadUrl("file:///android_asset/index.html");
+        String url = "file:///android_asset/index.html";
+        DisplayWebApp.displayWebApp(browser, "file:///android_asset/index.html");
+
+        //Driver.prepareFile(getApplicationContext());
+
+
     }
 
 }
